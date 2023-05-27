@@ -1,0 +1,35 @@
+{
+    "name": "Easy Reader",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "A tool to improve reading online including darkmode and font size",
+	"icons": {
+		"16": "images/icon16.png",
+		"32": "images/icon32.png",
+		"64": "images/icon64.png",
+		"128": "images/icon128.png"
+	},
+    "background": {
+        "scripts": [
+            "popup.js", "background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "Easy Reader",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "js": ["content.js"],
+          "matches": ["<all_urls>"]
+        }
+      ],
+    "permissions": [
+        "bookmarks",
+        "storage",
+        "https://*/*",
+        "http://*/*",
+        "tabs"
+    ]
+}

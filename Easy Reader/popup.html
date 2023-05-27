@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster:400|Raleway:300,400,500&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    .popup {
+        min-width: 344px;
+        min-height: 100px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 1rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-family: "Lobster";
+        text-align: center;
+
+    }
+
+    .yellow {
+        color: #FBE36D;
+    }
+
+    .blue {
+        color: #588BE4;
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-size: 0.75rem;
+    }
+
+    .button {
+        background-color: #FDFCA3;
+        position: relative;
+        height: 2rem;
+        width: 4rem;
+        border-radius: 25px;
+        transition: 1s;
+        font-family: "Raleway", sans-serif;
+    }
+
+    .half {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background-color: rgb(255, 213, 0);
+        pointer-events: none;
+        transition: 1s;
+
+    }
+
+    @keyframes transformToBlue {
+        0% {
+            background-color: #FDFCA3;
+        }
+
+        100% {
+            background-color: #8ABFF0;
+        }
+    }
+
+    @keyframes transformToYellow {
+        0% {
+            background-color: #8ABFF0;
+        }
+
+        100% {
+            background-color: #FDFCA3;
+        }
+    }
+
+    @keyframes moveCircleRight {
+        0% {
+            left: 0;
+            transform: translateX(0);
+            background-color: rgb(255, 213, 0);
+        }
+
+        100% {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #588BE4;
+        }
+    }
+
+    @keyframes moveCircleLeft {
+        0% {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #588BE4;
+        }
+
+        100% {
+            left: 0;
+            transform: translateX(0);
+            background-color: rgb(255, 213, 0);
+        }
+    }
+</style>
+
+<body>
+    <div class="popup">
+        <h1>Darkmode</h1>
+
+       <center><div class="button">
+            <div class="half" style="left: 5px;">On</div>
+            <div class="half" style="right: 5px; text-align: right;">Off</div>
+            <div class="circle"></div>
+        </div></center>
+    </div>
+    <div>
+        <table class="table table-striped">
+          <center><tbody>
+            <tr>
+              <H1>Font Size</H1>
+              <br>
+              <td>
+                <select name="fontsizeselect" id="fontsize">
+                  <option value="">--Select Size--</option>
+                  <option value="4">4</option>
+                  <option value="8">8</option>
+                  <option value="12">12</option>
+                  <option value="14">14</option>
+                  <option value="16">16</option>
+                  <option value="18">18</option>
+                  <option value="20">20</option>
+                  <option value="22">22</option>
+                  <option value="26">26</option>
+                  <option value="30">30</option>
+                  <option value="34">34</option>
+                  <option value="38">38</option>
+                  <option value="42">42</option>
+                  <option value="48">48</option>
+                  <option value="54">52</option>
+                  <option value="64">64</option>
+                  <option value="74">74</option>
+                  <option value="86">86</option>
+                  <option value="100">100</option>
+                  <option value="116">116</option>
+                  <option value="132">132</option>
+                  <option value="148">148</option>
+                  <option value="162">162</option>
+                </select>
+              </td>
+            </tr>
+          </tbody></center>
+        </table>
+      </div>
+
+    <script src="./popup.js">
+    </script>
+
+</body>
+
+</html>
